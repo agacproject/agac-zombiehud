@@ -1,0 +1,1641 @@
+/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+.customWidth1 {
+  width: 0%;
+  transition: 0.5s;
+}
+
+.customWidth2 {
+  width: 0%;
+  transition: 0.5s;
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 100;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Thin.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Thin.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 100;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 200;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 200;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Light.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Light.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 300;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-LightItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-LightItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Italic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Italic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Medium.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Bold.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Bold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: normal;
+
+  font-weight: 900;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-Black.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Black.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  font-style: italic;
+
+  font-weight: 900;
+
+  font-display: swap;
+
+  src: url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter var';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://rsms.me/inter/font-files/Inter-roman.var.woff2?v=3.19') format('woff2');
+
+  font-named-instance: 'Regular';
+}
+
+@font-face {
+  font-family: 'Inter var';
+
+  font-style: italic;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://rsms.me/inter/font-files/Inter-italic.var.woff2?v=3.19') format('woff2');
+
+  font-named-instance: 'Italic';
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.m-12 {
+  margin: 3rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[\'\+oldDatas\+\'\] {
+  width: '+oldDatas+';
+}
+
+.w-\[\'\+oldDatas\.health\+\'\] {
+  width: '+oldDatas.health+';
+}
+
+.w-\[\'\+oldDatas\.armor\+\'\] {
+  width: '+oldDatas.armor+';
+}
+
+.translate-x-1 {
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1 {
+  --tw-translate-y: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1 {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-0 {
+  --tw-translate-y: -0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-0\.5 {
+  --tw-translate-y: -0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#fff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#368daf\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 141 175 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#5eb3d4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 179 212 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#5e9bd4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 155 212 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d45e5e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 94 94 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#fff8f8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 248 248 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d3cfcf\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(211 207 207 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-0\.5 {
+  padding: 0.125rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-\[4px\] {
+  padding: 4px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-0\.5 {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-1\.5 {
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-neutral-600 {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.text-neutral-800 {
+  --tw-text-opacity: 1;
+  color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@supports(font-variation-settings: normal) {
+  .font-inter {
+    font-family: 'Inter var', system-ui, sans-serif;
+  }
+}
+
+.font-inter .font-feature-normal, .font-inter.font-feature-normal {
+  font-feature-settings: normal;
+}
+
+.font-inter .font-feature-default,.font-inter.font-feature-default {
+  font-feature-settings: "calt" 1, "kern" 1;
+}
+
+.font-inter .text-xs, .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.000490774em;
+}
+
+.font-inter .text-xs .tracking-tighter, .font-inter .text-xs.tracking-tighter, .font-inter.text-xs .tracking-tighter, .font-inter.text-xs.tracking-tighter, .tracking-tighter .font-inter .text-xs, .tracking-tighter .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: -0.049509226em;
+}
+
+.font-inter .text-xs .tracking-tight, .font-inter .text-xs.tracking-tight, .font-inter.text-xs .tracking-tight, .font-inter.text-xs.tracking-tight, .tracking-tight .font-inter .text-xs, .tracking-tight .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: -0.024509226em;
+}
+
+.font-inter .text-xs .tracking-normal, .font-inter .text-xs.tracking-normal, .font-inter.text-xs .tracking-normal, .font-inter.text-xs.tracking-normal, .tracking-normal .font-inter .text-xs, .tracking-normal .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.000490774em;
+}
+
+.font-inter .text-xs .tracking-wide, .font-inter .text-xs.tracking-wide, .font-inter.text-xs .tracking-wide, .font-inter.text-xs.tracking-wide, .tracking-wide .font-inter .text-xs, .tracking-wide .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.025490774em;
+}
+
+.font-inter .text-xs .tracking-wider, .font-inter .text-xs.tracking-wider, .font-inter.text-xs .tracking-wider, .font-inter.text-xs.tracking-wider, .tracking-wider .font-inter .text-xs, .tracking-wider .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.050490774em;
+}
+
+.font-inter .text-xs .tracking-widest, .font-inter .text-xs.tracking-widest, .font-inter.text-xs .tracking-widest, .font-inter.text-xs.tracking-widest, .tracking-widest .font-inter .text-xs, .tracking-widest .font-inter.text-xs {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.100490774em;
+}
+
+.font-inter .text-sm, .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.006223544em;
+}
+
+.font-inter .text-sm .tracking-tighter, .font-inter .text-sm.tracking-tighter, .font-inter.text-sm .tracking-tighter, .font-inter.text-sm.tracking-tighter, .tracking-tighter .font-inter .text-sm, .tracking-tighter .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.056223544em;
+}
+
+.font-inter .text-sm .tracking-tight, .font-inter .text-sm.tracking-tight, .font-inter.text-sm .tracking-tight, .font-inter.text-sm.tracking-tight, .tracking-tight .font-inter .text-sm, .tracking-tight .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.031223544em;
+}
+
+.font-inter .text-sm .tracking-normal, .font-inter .text-sm.tracking-normal, .font-inter.text-sm .tracking-normal, .font-inter.text-sm.tracking-normal, .tracking-normal .font-inter .text-sm, .tracking-normal .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.006223544em;
+}
+
+.font-inter .text-sm .tracking-wide, .font-inter .text-sm.tracking-wide, .font-inter.text-sm .tracking-wide, .font-inter.text-sm.tracking-wide, .tracking-wide .font-inter .text-sm, .tracking-wide .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.018776456em;
+}
+
+.font-inter .text-sm .tracking-wider, .font-inter .text-sm.tracking-wider, .font-inter.text-sm .tracking-wider, .font-inter.text-sm.tracking-wider, .tracking-wider .font-inter .text-sm, .tracking-wider .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.043776456em;
+}
+
+.font-inter .text-sm .tracking-widest, .font-inter .text-sm.tracking-widest, .font-inter.text-sm .tracking-widest, .font-inter.text-sm.tracking-widest, .tracking-widest .font-inter .text-sm, .tracking-widest .font-inter.text-sm {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.093776456em;
+}
+
+.font-inter .text-base, .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: -0.010959779em;
+}
+
+.font-inter .text-base .tracking-tighter, .font-inter .text-base.tracking-tighter, .font-inter.text-base .tracking-tighter, .font-inter.text-base.tracking-tighter, .tracking-tighter .font-inter .text-base, .tracking-tighter .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: -0.060959779em;
+}
+
+.font-inter .text-base .tracking-tight, .font-inter .text-base.tracking-tight, .font-inter.text-base .tracking-tight, .font-inter.text-base.tracking-tight, .tracking-tight .font-inter .text-base, .tracking-tight .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: -0.035959779em;
+}
+
+.font-inter .text-base .tracking-normal, .font-inter .text-base.tracking-normal, .font-inter.text-base .tracking-normal, .font-inter.text-base.tracking-normal, .tracking-normal .font-inter .text-base, .tracking-normal .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: -0.010959779em;
+}
+
+.font-inter .text-base .tracking-wide, .font-inter .text-base.tracking-wide, .font-inter.text-base .tracking-wide, .font-inter.text-base.tracking-wide, .tracking-wide .font-inter .text-base, .tracking-wide .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.014040221em;
+}
+
+.font-inter .text-base .tracking-wider, .font-inter .text-base.tracking-wider, .font-inter.text-base .tracking-wider, .font-inter.text-base.tracking-wider, .tracking-wider .font-inter .text-base, .tracking-wider .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.039040221em;
+}
+
+.font-inter .text-base .tracking-widest, .font-inter .text-base.tracking-widest, .font-inter.text-base .tracking-widest, .font-inter.text-base.tracking-widest, .tracking-widest .font-inter .text-base, .tracking-widest .font-inter.text-base {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.089040221em;
+}
+
+.font-inter .text-lg, .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.014300686em;
+}
+
+.font-inter .text-lg .tracking-tighter, .font-inter .text-lg.tracking-tighter, .font-inter.text-lg .tracking-tighter, .font-inter.text-lg.tracking-tighter, .tracking-tighter .font-inter .text-lg, .tracking-tighter .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.064300686em;
+}
+
+.font-inter .text-lg .tracking-tight, .font-inter .text-lg.tracking-tight, .font-inter.text-lg .tracking-tight, .font-inter.text-lg.tracking-tight, .tracking-tight .font-inter .text-lg, .tracking-tight .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.039300686em;
+}
+
+.font-inter .text-lg .tracking-normal, .font-inter .text-lg.tracking-normal, .font-inter.text-lg .tracking-normal, .font-inter.text-lg.tracking-normal, .tracking-normal .font-inter .text-lg, .tracking-normal .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.014300686em;
+}
+
+.font-inter .text-lg .tracking-wide, .font-inter .text-lg.tracking-wide, .font-inter.text-lg .tracking-wide, .font-inter.text-lg.tracking-wide, .tracking-wide .font-inter .text-lg, .tracking-wide .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.010699314em;
+}
+
+.font-inter .text-lg .tracking-wider, .font-inter .text-lg.tracking-wider, .font-inter.text-lg .tracking-wider, .font-inter.text-lg.tracking-wider, .tracking-wider .font-inter .text-lg, .tracking-wider .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.035699314em;
+}
+
+.font-inter .text-lg .tracking-widest, .font-inter .text-lg.tracking-widest, .font-inter.text-lg .tracking-widest, .font-inter.text-lg.tracking-widest, .tracking-widest .font-inter .text-lg, .tracking-widest .font-inter.text-lg {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.085699314em;
+}
+
+.font-inter .text-xl, .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+
+.font-inter .text-xl .tracking-tighter, .font-inter .text-xl.tracking-tighter, .font-inter.text-xl .tracking-tighter, .font-inter.text-xl.tracking-tighter, .tracking-tighter .font-inter .text-xl, .tracking-tighter .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.066657339em;
+}
+
+.font-inter .text-xl .tracking-tight, .font-inter .text-xl.tracking-tight, .font-inter.text-xl .tracking-tight, .font-inter.text-xl.tracking-tight, .tracking-tight .font-inter .text-xl, .tracking-tight .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.041657339em;
+}
+
+.font-inter .text-xl .tracking-normal, .font-inter .text-xl.tracking-normal, .font-inter.text-xl .tracking-normal, .font-inter.text-xl.tracking-normal, .tracking-normal .font-inter .text-xl, .tracking-normal .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+
+.font-inter .text-xl .tracking-wide, .font-inter .text-xl.tracking-wide, .font-inter.text-xl .tracking-wide, .font-inter.text-xl.tracking-wide, .tracking-wide .font-inter .text-xl, .tracking-wide .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.008342661em;
+}
+
+.font-inter .text-xl .tracking-wider, .font-inter .text-xl.tracking-wider, .font-inter.text-xl .tracking-wider, .font-inter.text-xl.tracking-wider, .tracking-wider .font-inter .text-xl, .tracking-wider .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.033342661em;
+}
+
+.font-inter .text-xl .tracking-widest, .font-inter .text-xl.tracking-widest, .font-inter.text-xl .tracking-widest, .font-inter.text-xl.tracking-widest, .tracking-widest .font-inter .text-xl, .tracking-widest .font-inter.text-xl {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.083342661em;
+}
+
+.font-inter .text-2xl, .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.019492328em;
+}
+
+.font-inter .text-2xl .tracking-tighter, .font-inter .text-2xl.tracking-tighter, .font-inter.text-2xl .tracking-tighter, .font-inter.text-2xl.tracking-tighter, .tracking-tighter .font-inter .text-2xl, .tracking-tighter .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.069492328em;
+}
+
+.font-inter .text-2xl .tracking-tight, .font-inter .text-2xl.tracking-tight, .font-inter.text-2xl .tracking-tight, .font-inter.text-2xl.tracking-tight, .tracking-tight .font-inter .text-2xl, .tracking-tight .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.044492328em;
+}
+
+.font-inter .text-2xl .tracking-normal, .font-inter .text-2xl.tracking-normal, .font-inter.text-2xl .tracking-normal, .font-inter.text-2xl.tracking-normal, .tracking-normal .font-inter .text-2xl, .tracking-normal .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.019492328em;
+}
+
+.font-inter .text-2xl .tracking-wide, .font-inter .text-2xl.tracking-wide, .font-inter.text-2xl .tracking-wide, .font-inter.text-2xl.tracking-wide, .tracking-wide .font-inter .text-2xl, .tracking-wide .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.005507672em;
+}
+
+.font-inter .text-2xl .tracking-wider, .font-inter .text-2xl.tracking-wider, .font-inter.text-2xl .tracking-wider, .font-inter.text-2xl.tracking-wider, .tracking-wider .font-inter .text-2xl, .tracking-wider .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.030507672em;
+}
+
+.font-inter .text-2xl .tracking-widest, .font-inter .text-2xl.tracking-widest, .font-inter.text-2xl .tracking-widest, .font-inter.text-2xl.tracking-widest, .tracking-widest .font-inter .text-2xl, .tracking-widest .font-inter.text-2xl {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.080507672em;
+}
+
+.font-inter .text-3xl, .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: -0.021314537em;
+}
+
+.font-inter .text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: -0.071314537em;
+}
+
+.font-inter .text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: -0.046314537em;
+}
+
+.font-inter .text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: -0.021314537em;
+}
+
+.font-inter .text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: 0.003685463em;
+}
+
+.font-inter .text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: 0.028685463em;
+}
+
+.font-inter .text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  letter-spacing: 0.078685463em;
+}
+
+.font-inter .text-4xl, .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: -0.021954113em;
+}
+
+.font-inter .text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: -0.071954113em;
+}
+
+.font-inter .text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: -0.046954113em;
+}
+
+.font-inter .text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: -0.021954113em;
+}
+
+.font-inter .text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.003045887em;
+}
+
+.font-inter .text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.028045887em;
+}
+
+.font-inter .text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.078045887em;
+}
+
+.font-inter .text-5xl, .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: -0.022257389em;
+}
+
+.font-inter .text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: -0.072257389em;
+}
+
+.font-inter .text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: -0.047257389em;
+}
+
+.font-inter .text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: -0.022257389em;
+}
+
+.font-inter .text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: 0.002742611em;
+}
+
+.font-inter .text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: 0.027742611em;
+}
+
+.font-inter .text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: 0.077742611em;
+}
+
+.font-inter .text-6xl, .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: -0.022294751em;
+}
+
+.font-inter .text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: -0.072294751em;
+}
+
+.font-inter .text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: -0.047294751em;
+}
+
+.font-inter .text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: -0.022294751em;
+}
+
+.font-inter .text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: 0.002705249em;
+}
+
+.font-inter .text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: 0.027705249em;
+}
+
+.font-inter .text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+  line-height: 1;
+  font-size: 3.75rem;
+  letter-spacing: 0.077705249em;
+}
+
+.font-inter .text-7xl, .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: -0.022299353em;
+}
+
+.font-inter .text-7xl .tracking-tighter, .font-inter .text-7xl.tracking-tighter, .font-inter.text-7xl .tracking-tighter, .font-inter.text-7xl.tracking-tighter, .tracking-tighter .font-inter .text-7xl, .tracking-tighter .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: -0.072299353em;
+}
+
+.font-inter .text-7xl .tracking-tight, .font-inter .text-7xl.tracking-tight, .font-inter.text-7xl .tracking-tight, .font-inter.text-7xl.tracking-tight, .tracking-tight .font-inter .text-7xl, .tracking-tight .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: -0.047299353em;
+}
+
+.font-inter .text-7xl .tracking-normal, .font-inter .text-7xl.tracking-normal, .font-inter.text-7xl .tracking-normal, .font-inter.text-7xl.tracking-normal, .tracking-normal .font-inter .text-7xl, .tracking-normal .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: -0.022299353em;
+}
+
+.font-inter .text-7xl .tracking-wide, .font-inter .text-7xl.tracking-wide, .font-inter.text-7xl .tracking-wide, .font-inter.text-7xl.tracking-wide, .tracking-wide .font-inter .text-7xl, .tracking-wide .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: 0.002700647em;
+}
+
+.font-inter .text-7xl .tracking-wider, .font-inter .text-7xl.tracking-wider, .font-inter.text-7xl .tracking-wider, .font-inter.text-7xl.tracking-wider, .tracking-wider .font-inter .text-7xl, .tracking-wider .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: 0.027700647em;
+}
+
+.font-inter .text-7xl .tracking-widest, .font-inter .text-7xl.tracking-widest, .font-inter.text-7xl .tracking-widest, .font-inter.text-7xl.tracking-widest, .tracking-widest .font-inter .text-7xl, .tracking-widest .font-inter.text-7xl {
+  line-height: 1;
+  font-size: 4.5rem;
+  letter-spacing: 0.077700647em;
+}
+
+.font-inter .text-8xl, .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: -0.02229999em;
+}
+
+.font-inter .text-8xl .tracking-tighter, .font-inter .text-8xl.tracking-tighter, .font-inter.text-8xl .tracking-tighter, .font-inter.text-8xl.tracking-tighter, .tracking-tighter .font-inter .text-8xl, .tracking-tighter .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: -0.07229999em;
+}
+
+.font-inter .text-8xl .tracking-tight, .font-inter .text-8xl.tracking-tight, .font-inter.text-8xl .tracking-tight, .font-inter.text-8xl.tracking-tight, .tracking-tight .font-inter .text-8xl, .tracking-tight .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: -0.04729999em;
+}
+
+.font-inter .text-8xl .tracking-normal, .font-inter .text-8xl.tracking-normal, .font-inter.text-8xl .tracking-normal, .font-inter.text-8xl.tracking-normal, .tracking-normal .font-inter .text-8xl, .tracking-normal .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: -0.02229999em;
+}
+
+.font-inter .text-8xl .tracking-wide, .font-inter .text-8xl.tracking-wide, .font-inter.text-8xl .tracking-wide, .font-inter.text-8xl.tracking-wide, .tracking-wide .font-inter .text-8xl, .tracking-wide .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: 0.00270001em;
+}
+
+.font-inter .text-8xl .tracking-wider, .font-inter .text-8xl.tracking-wider, .font-inter.text-8xl .tracking-wider, .font-inter.text-8xl.tracking-wider, .tracking-wider .font-inter .text-8xl, .tracking-wider .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: 0.02770001em;
+}
+
+.font-inter .text-8xl .tracking-widest, .font-inter .text-8xl.tracking-widest, .font-inter.text-8xl .tracking-widest, .font-inter.text-8xl.tracking-widest, .tracking-widest .font-inter .text-8xl, .tracking-widest .font-inter.text-8xl {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: 0.07770001em;
+}
+
+.font-inter .text-9xl, .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: -0.0223em;
+}
+
+.font-inter .text-9xl .tracking-tighter, .font-inter .text-9xl.tracking-tighter, .font-inter.text-9xl .tracking-tighter, .font-inter.text-9xl.tracking-tighter, .tracking-tighter .font-inter .text-9xl, .tracking-tighter .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: -0.0723em;
+}
+
+.font-inter .text-9xl .tracking-tight, .font-inter .text-9xl.tracking-tight, .font-inter.text-9xl .tracking-tight, .font-inter.text-9xl.tracking-tight, .tracking-tight .font-inter .text-9xl, .tracking-tight .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: -0.0473em;
+}
+
+.font-inter .text-9xl .tracking-normal, .font-inter .text-9xl.tracking-normal, .font-inter.text-9xl .tracking-normal, .font-inter.text-9xl.tracking-normal, .tracking-normal .font-inter .text-9xl, .tracking-normal .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: -0.0223em;
+}
+
+.font-inter .text-9xl .tracking-wide, .font-inter .text-9xl.tracking-wide, .font-inter.text-9xl .tracking-wide, .font-inter.text-9xl.tracking-wide, .tracking-wide .font-inter .text-9xl, .tracking-wide .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: 0.0027em;
+}
+
+.font-inter .text-9xl .tracking-wider, .font-inter .text-9xl.tracking-wider, .font-inter.text-9xl .tracking-wider, .font-inter.text-9xl.tracking-wider, .tracking-wider .font-inter .text-9xl, .tracking-wider .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: 0.0277em;
+}
+
+.font-inter .text-9xl .tracking-widest, .font-inter .text-9xl.tracking-widest, .font-inter.text-9xl .tracking-widest, .font-inter.text-9xl.tracking-widest, .tracking-widest .font-inter .text-9xl, .tracking-widest .font-inter.text-9xl {
+  line-height: 1;
+  font-size: 8rem;
+  letter-spacing: 0.0777em;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+::-webkit-scrollbar {
+  /* width: 5px; */
+  display: none;
+}
+
+/* ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: #212121;
+    } */
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: #212121;
+}
