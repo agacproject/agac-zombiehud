@@ -3,12 +3,9 @@ local hudStatus = false
 Citizen.CreateThread(function()
     while true do
         if hudStatus == true then
-            Citizen.Wait(1000)
-            TriggerEvent('deniz:load')
-        else
-            Citizen.Wait(4000)
+           updateHud()
         end
-        Citizen.Wait(1)
+        Citizen.Wait(hudStatus == true and 1000 or 4000)
     end
 end)
 
@@ -18,7 +15,7 @@ end)
 -- discord: denizaight - .gg/teamcloud
 
 RegisterCommand('debughud', function()
-    TriggerEvent('deniz:load')
+    updateHud()
 end)
 
 RegisterCommand('showhud', function()
@@ -35,7 +32,7 @@ RegisterCommand('hidehud', function()
     hudStatus = false
 end)
 
-RegisterNetEvent('deniz:load', function()
+function updateHud()
     local loadData = {
         health = GetEntityHealth(PlayerPedId()) / 2,
         armor = GetPedArmour(PlayerPedId())
@@ -44,7 +41,7 @@ RegisterNetEvent('deniz:load', function()
         type = 'updateHud',
         data = loadData
     })
-end)
+end
 
 -- discord: denizaight - .gg/teamcloud
 -- discord: denizaight - .gg/teamcloud
