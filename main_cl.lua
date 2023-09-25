@@ -1,13 +1,6 @@
 local hudStatus = false
 
 Citizen.CreateThread(function()
-    SendNUIMessage({
-        type = 'showHud'
-    })
-    hudStatus = true
-end)
-
-Citizen.CreateThread(function()
     while true do
         if hudStatus == true then
             Citizen.Wait(1000)
