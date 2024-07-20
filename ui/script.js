@@ -16,9 +16,3 @@ function updateHud(data) {
     $('.customWidth1').css('width', data.armor+'%');
     $('.customWidth2').css('width', data.health+'%');
 }
-
-// discord: denizaight - .gg/teamcloud
-// discord: denizaight - .gg/teamcloud
-// discord: denizaight - .gg/teamcloud
-// discord: denizaight - .gg/teamcloud
-// discord: denizaight - .gg/teamcloud
