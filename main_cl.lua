@@ -4,7 +4,7 @@ Citizen.CreateThread(function()
     while true do
         if hudStatus == true then
             Citizen.Wait(1000)
-            TriggerEvent('deniz:load')
+            TriggerEvent('agac-zombiehud:load')
         else
             Citizen.Wait(4000)
         end
@@ -12,13 +12,8 @@ Citizen.CreateThread(function()
     end
 end)
 
--- discord: denizaight - .gg/teamcloud
--- discord: denizaight - .gg/teamcloud
--- discord: denizaight - .gg/teamcloud
--- discord: denizaight - .gg/teamcloud
-
 RegisterCommand('debughud', function()
-    TriggerEvent('deniz:load')
+    TriggerEvent('agac-zombiehud:load')
 end)
 
 RegisterCommand('showhud', function()
@@ -35,7 +30,7 @@ RegisterCommand('hidehud', function()
     hudStatus = false
 end)
 
-RegisterNetEvent('deniz:load', function()
+RegisterNetEvent('agac-zombiehud:load', function()
     local loadData = {
         health = GetEntityHealth(PlayerPedId()) / 2,
         armor = GetPedArmour(PlayerPedId())
@@ -45,8 +40,3 @@ RegisterNetEvent('deniz:load', function()
         data = loadData
     })
 end)
-
--- discord: denizaight - .gg/teamcloud
--- discord: denizaight - .gg/teamcloud
--- discord: denizaight - .gg/teamcloud
--- discord: denizaight - .gg/teamcloud
